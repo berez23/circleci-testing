@@ -6,4 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
+      - add_ssh_keys:
+          fingerprints:
+            - "e0:40:27:7e:28:1b:67:27:f9:ba:16:bf:78:47:21:34"
       - run: ssh -o "StrictHostKeyChecking no" backup.drazisil.com ls
